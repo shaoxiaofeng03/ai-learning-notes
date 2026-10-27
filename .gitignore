@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 环境变量与密钥（千万别提交）
+.env
+*.key
+
+# 旧文档备份
+bak/
+
+# Node / 前端
+node_modules/
+.next/
+dist/
+
+# 系统
+.DS_Store

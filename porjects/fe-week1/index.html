@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个页面 · AI 对话 Demo</title>
+  <style>
+    /* ============================================================
+       W1 前端目标：理解「盒模型 + flex 布局」就够了。
+       学习方法：改任意一个值 → 刷新页面看变化，比看十遍教程有用。
+       JS 留到 W2，这一页是纯 HTML + CSS 静态页。
+       ============================================================ */
+
+    /* 盒模型：让 padding/border 算进宽高，少踩坑（面试也常问） */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      height: 100vh;            /* 占满视口高度 */
+      display: flex;            /* flex 布局三件套：让卡片居中 */
+      justify-content: center;  /* 水平居中 */
+      align-items: center;      /* 垂直居中 */
+      background: #f5f6f8;
+    }
+
+    /* 卡片容器：整个「聊天窗口」 */
+    .chat-card {
+      width: 420px;
+      height: 640px;
+      display: flex;
+      flex-direction: column;   /* 子元素纵向排列：头 / 消息 / 输入 */
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+      overflow: hidden;
+    }
+
+    /* 头部 */
+    .chat-header {
+      padding: 16px;
+      background: #1f6feb;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* 消息区：flex: 1 让它占满剩余空间，溢出可滚动 */
+    .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;                /* 气泡之间的间距 */
+    }
+
+    /* 一条消息：气泡 */
+    .message {
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 10px;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+    .message.user      { align-self: flex-end;   background: #1f6feb; color: #fff; }
+    .message.assistant { align-self: flex-start; background: #f0f2f5; color: #333; }
+
+    /* 输入区 */
+    .chat-input {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid #eee;
+    }
+    .chat-input input {
+      flex: 1;                  /* 输入框占满剩余宽度 */
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .chat-input button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #1f6feb;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-card">
+    <div class="chat-header">AI 助手（静态演示）</div>
+
+    <div class="chat-body">
+      <div class="message assistant">你好，我是你第一个页面里的 AI。W2 我会真的连上后端。</div>
+      <div class="message user">你好！</div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" placeholder="输入消息（W2 才有真功能）">
+      <button>发送</button>
+    </div>
+  </div>
+</body>
+</html>
