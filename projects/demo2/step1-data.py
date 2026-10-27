@@ -35,6 +35,9 @@ if __name__ == "__main__":
     print(type(age))                     # <class 'int'>
     print(isinstance(age, int))          # True  ← Java 的 instanceof
 
+    print(type(name))
+    print(isinstance(name, str))
+
     # 真值（falsy）：None / 0 / "" / [] / {} / set() 全部为 False
     print(bool(None), bool(0), bool(""), bool([]), bool({}))   # 全 False
 
