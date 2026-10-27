@@ -180,13 +180,15 @@ W19─ W24  │ 阶段5 求职冲刺         │ 简历 + 模拟面试 + 投递 
 
 #### W1｜环境 + 第一次调用 + 第一个页面
 
-**Day 1（2 小时）**
+- [x] **Day 1（2 小时）**
+
 1. 装 Ollama，拉一个 7B 级中文模型（Qwen 系列），本机跑通对话。
 2. 申请 2 个云端 API Key（一主一备，DeepSeek / 通义 / 智谱 / Kimi 任选，充值 50 元）。
 3. 用 `curl` 手调一次 `/v1/chat/completions`，看懂每个字段：`model` / `messages` / `temperature` / `max_tokens` / `stream` / `tools`。
 4. 用 Python 写 50 行命令行聊天机器人，支持多轮上下文。
 
 **Day 2–3（4 小时）** Python 够用线（只补这些，别刷完整教程）：
+
 - 语法与数据结构（list/dict/set/推导式）、函数、类与 dataclass、`typing`
 - `pydantic` 模型（结构化输出全靠它）
 - `async/await` + `asyncio.gather`（对应你熟悉的线程池/CompletableFuture）
