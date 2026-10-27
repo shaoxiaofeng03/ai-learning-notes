@@ -7,7 +7,7 @@
 ## 环境
 
 ```bash
-cd /home/sky/Documents/AI/porjects/demo2
+cd /home/sky/Documents/AI/projects/demo2
 source .venv/bin/activate          # 虚拟环境已存在
 pip install -r requirements.txt    # 依赖已装好（openai / httpx / pydantic / python-dotenv）
 ```

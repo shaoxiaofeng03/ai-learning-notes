@@ -48,7 +48,7 @@
 ### 1.2 用 venv（零依赖，先会这个）
 
 ```bash
-cd /home/sky/Documents/AI/porjects/demo1
+cd /home/sky/Documents/AI/projects/demo1
 
 # 创建虚拟环境（会在当前目录生成 .venv/）
 python3 -m venv .venv
@@ -70,7 +70,7 @@ deactivate
 **你现在的 `.venv` 已经存在**（`demo1/.venv`），直接激活即可：
 
 ```bash
-source /home/sky/Documents/AI/porjects/demo1/.venv/bin/activate
+source /home/sky/Documents/AI/projects/demo1/.venv/bin/activate
 ```
 
 ### 1.3 用 uv（推荐，快 10~100 倍）
