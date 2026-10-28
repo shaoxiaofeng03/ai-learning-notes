@@ -39,6 +39,12 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'AI 学习笔记',
   description: 'AI 全栈工程师学习笔记 · 记忆卡片',
+
+  // GitHub Pages 项目站点地址是 https://<user>.github.io/<repo>/，
+  // 必须以仓库名作为 base，否则 CSS/JS 全部 404。
+  // 以后若绑定自定义域名或改用 <user>.github.io 根站点，把这里改成 '/'。
+  base: '/ai-learning-notes/',
+
   cleanUrls: true,
   lastUpdated: true,
 
@@ -86,7 +92,7 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色',
 
     footer: {
-      message: '基于 VitePress 构建 · 由 cnb.cool 推送自动部署',
+      message: '基于 VitePress 构建 · 由 GitHub Pages 自动部署',
       copyright: 'AI 学习笔记',
     },
   },
