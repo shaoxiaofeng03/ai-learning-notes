@@ -6,6 +6,15 @@ description: 推送到三个仓库（主推腾讯 cnb，同步 gitcode + github�
 
 按顺序执行，任一环节失败立即停止并报告，不要重试、不要绕过：
 
+0. 如果思源笔记桌面端在运行（`curl -s -m 3 -X POST http://127.0.0.1:6806/api/system/version` 有响应），先同步笔记：
+
+   ```
+   python3 scripts/siyuan_export.py
+   ```
+
+   - 成功 → 把 `notes/siyuan/` 的变更一起提交。
+   - 连不上（思源没开）→ **跳过这一步**，不要报错中断，在最终报告里注明「思源未运行，本次未同步笔记」。
+
 1. `git status --short` 检查工作区。
    - 如果输出里出现 `.env`、`*.key`、`token` 之类疑似密钥文件，**立即停止**并警告，不要提交。
    - 如果有未提交改动：先用一段话概括改动内容 + 拟用的中文 commit message，然后 `git add` 具体文件（不要无脑 `git add -A`，跳过 `.venv/`、`__pycache__/`、`.idea/`），`git commit`。
